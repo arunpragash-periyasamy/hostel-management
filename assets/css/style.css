@@ -1616,6 +1616,8 @@ div#global-loader,
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+/* student registration page content */
+
 @media (max-width: 991px) {
   .page-wrapper {
     margin: 0;
