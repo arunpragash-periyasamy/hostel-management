@@ -12,6 +12,11 @@
 </head>
 
 <body>
+
+<div id="global-loader">
+      <div class="whirly-loader"></div>
+    </div>
+    
     <div class="main-wrapper">
         <?php
             include './files/header.html';
@@ -355,6 +360,14 @@
     <?php 
         include './files/script.html';
     ?>
+    <script>
+
+    $(document).ready(function() {
+        // activate the sidebar
+        $(".header").removeClass("active");
+        $(".hostelAdmission").addClass("active");
+    });
+    </script>
 </body>
 
 </html>

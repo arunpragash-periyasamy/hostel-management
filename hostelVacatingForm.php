@@ -184,6 +184,14 @@
     <?php 
         include './files/script.html';
     ?>
+
+    <script>
+    $(document).ready(function() {
+        // activate the sidebar
+        $(".header").removeClass("active");
+        $(".hostelVacating").addClass("active");
+    });
+    </script>
 </body>
 
 </html>

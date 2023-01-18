@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    <div id="global-loader">
+      <div class="whirly-loader"></div>
+    </div>
+
     <div class="main-wrapper">
         <?php
             include './files/header.html';
@@ -143,9 +147,17 @@
 
 
     </div>
-    <?php 
+    
+    <?php
         include './files/script.html';
     ?>
+    <script>
+        $(document).ready(function(){
+            // activate the sidebar
+            $(".header").removeClass("active");
+            $(".studentRegistration").addClass("active");
+        });
+    </script>
 </body>
 
 </html>

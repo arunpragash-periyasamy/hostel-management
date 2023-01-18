@@ -143,8 +143,8 @@ $(document).ready(function () {
     $("#global-loader");
     setTimeout(function () {
       $("#global-loader").fadeOut("slow");
-    }, 100); // 100 secs
-  }, 500);  // 500 secs
+    }, 10); // 100 secs
+  }, 50);  // 500 secs
   // funtion for setting time to the loader ends
 
 
@@ -322,6 +322,7 @@ $(document).ready(function () {
     this.$menuItem = $("#sidebar-menu a");
   };
 
+// function for the active sidebar
 
   function init() {
     var $this = Sidemenu;
@@ -339,14 +340,31 @@ $(document).ready(function () {
         $(this).next("ul").slideUp(350);
       }
     });
-    $("#sidebar-menu ul li.submenu a.active")
+
+    // script for the make the sidebar active start
+    // $("#sidebar-menu ul li.submenu a.active")
+    // .parents("li:last")
+    // .children("a:first")
+    // .addClass("active")
+    // .trigger("click");
+    
+    // setting timer for activating the active class in 100 sec starts
+    setTimeout(function () {
+      $("#sidebar-menu ul li.submenu a.active")
       .parents("li:last")
       .children("a:first")
       .addClass("active")
       .trigger("click");
+
+    }, 10);
+    // setting timer for activating the active class in 100 sec ends
+
+    // script for the make the sidebar active start
+
   }
 
   init();
+
   $(document).on("mouseover", function (e) {
     e.stopPropagation();
     if ($("body").hasClass("mini-sidebar") && $("#toggle_btn").is(":visible")) {
