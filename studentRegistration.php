@@ -13,7 +13,7 @@
 
 <body>
     <div id="global-loader">
-      <div class="whirly-loader"></div>
+        <div class="whirly-loader"></div>
     </div>
 
     <div class="main-wrapper">
@@ -147,16 +147,15 @@
 
 
     </div>
-    
+
     <?php
         include './files/script.html';
     ?>
     <script>
-        $(document).ready(function(){
-            // activate the sidebar
-            $(".header").removeClass("active");
-            $(".studentRegistration").addClass("active");
-        });
+    $(document).ready(function() {
+        // activate the sidebar
+        $(".studentRegistration").addClass("active");
+    });
     </script>
 </body>
 

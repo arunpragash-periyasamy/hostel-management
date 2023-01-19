@@ -140,14 +140,11 @@ $(document).ready(function () {
 
   // funtion for setting time to the loader starts 
   setTimeout(function () {
-    // function to add active sidemenu
-    activeSideBar();
-
     $("#global-loader");
     setTimeout(function () {
       $("#global-loader").fadeOut("slow");
-    }, 1); // 1 milli seconds
-  }, 5);  // 5 milli seconds
+    }, 10); // 100 secs
+  }, 50);  // 500 secs
   // funtion for setting time to the loader ends
 
 
@@ -327,14 +324,6 @@ $(document).ready(function () {
 
 // function for the active sidebar
 
-  function activeSideBar(){
-    $("#sidebar-menu ul li.submenu a.active")
-    .parents("li:last")
-    .children("a:first")
-    .addClass("active")
-    .trigger("click");
-    
-  }
   function init() {
     var $this = Sidemenu;
     $("#sidebar-menu a").on("click", function (e) {
@@ -353,11 +342,23 @@ $(document).ready(function () {
     });
 
     // script for the make the sidebar active start
-    $("#sidebar-menu ul li.submenu a.active")
-    .parents("li:last")
-    .children("a:first")
-    .addClass("active")
-    .trigger("click");
+    // $("#sidebar-menu ul li.submenu a.active")
+    // .parents("li:last")
+    // .children("a:first")
+    // .addClass("active")
+    // .trigger("click");
+    
+    // setting timer for activating the active class in 100 sec starts
+    setTimeout(function () {
+      $("#sidebar-menu ul li.submenu a.active")
+      .parents("li:last")
+      .children("a:first")
+      .addClass("active")
+      .trigger("click");
+
+    }, 10);
+    // setting timer for activating the active class in 100 sec ends
+
     // script for the make the sidebar active start
 
   }
