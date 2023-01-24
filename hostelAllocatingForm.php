@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostel Allocating</title>
-    <?php 
-        include './files/styles.html';
-    ?>
-</head>
-
-<body>
-
-<div id="global-loader">
-      <div class="whirly-loader"></div>
-    </div>
-<div class="main-wrapper">
-        <?php
-            include './files/header.html';
-        ?>
-
         <!-- main content start -->
 
         <div class="page-wrapper cardhead ">
@@ -183,11 +160,6 @@
         <!-- main content ends -->
 
 
-
-    </div>
-    <?php 
-        include './files/script.html';
-    ?>
     <script>
         $(document).ready(function() {
             // activate the sidebar
@@ -195,6 +167,3 @@
             $(".hostelAllocating").addClass("active");
         });
     </script>
-</body>
-
-</html>

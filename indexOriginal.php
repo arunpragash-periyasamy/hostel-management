@@ -1,11 +1,16 @@
 <?php
-    $pageName = str_replace(array("/index.php/", "/index.php"), "", "$_SERVER[PHP_SELF]");
-    $pageName = $pageName ?: "dashboard";
+    $pageName = "$_SERVER[PHP_SELF]";
+    $pageName = str_replace("/index.php/", "", $pageName);
+    $pageName = str_replace("/index.php", "", $pageName);
+    $pageName = ($pageName == "") ? "dashboard" : $pageName;
     $title = ucfirst(preg_replace('/(?<=\w)(?=[A-Z])/',' ',$pageName));
+
     $page = $pageName.".php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,23 +23,27 @@
         }else{
     ?>
 </head>
+
 <body>
     <div id="global-loader">
         <div class="whirly-loader"></div>
     </div>
+
     <div class="main-wrapper">
+        <?php
+            include './files/header.html';
+            include "$page";
+        ?>
+    </div>
     <?php
-        include './files/header.html';
-        include "$page";
+         }
+         include './files/script.html';
     ?>
-</div>
-<?php
-     }
-     include './files/script.html';
-?>
-<script>
-    document.title = "<?php echo $title;?>";
-    $(".<?php echo $pageName;?>").addClass("active");
-</script>
+    <script>
+        document.title = "<?php echo $title;?>";
+        $(".<?php echo $pageName;?>").addClass("active");
+    </script>
+    
 </body>
+
 </html>
